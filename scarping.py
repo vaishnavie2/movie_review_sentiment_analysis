@@ -22,7 +22,8 @@ def scrape_imdb(movie, target_reviews=30):
         driver.get(movie['url'])
         time.sleep(2) # Thoda sa wait
 
-        # Load More: Sirf 1 baar click (approx 50 reviews mil jayenge)
+        # Load More: Sirf 1 baar click (apporox
+        
         try:
             btn = driver.find_element(By.CSS_SELECTOR, "button.ipc-see-more__button")
             btn.click() 
@@ -79,6 +80,8 @@ movies_list = [
     {"genre": "Sci-Fi", "name": "Brahmastra", "url": "https://www.imdb.com/title/tt6277462/reviews/"},
     {"genre": "Sci-Fi", "name": "2.0", "url": "https://www.imdb.com/title/tt5080556/reviews/"},
     {"genre": "Sci-Fi", "name": "Rocketry", "url": "https://www.imdb.com/title/tt9263550/reviews/"}
+
+
 
 
 ]
