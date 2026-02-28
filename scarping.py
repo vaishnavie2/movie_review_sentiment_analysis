@@ -22,7 +22,7 @@ def scrape_imdb(movie, target_reviews=30):
         driver.get(movie['url'])
         time.sleep(2) # Thoda sa wait
 
-        # Load More: Sirf 1 baar click (apporox
+        # Load More: click once (approx 50 reviews)
         
         try:
             btn = driver.find_element(By.CSS_SELECTOR, "button.ipc-see-more__button")
@@ -99,4 +99,5 @@ if __name__ == "__main__":
     df.to_csv("bolly_reviews_2026.csv", index=False)
     
     print("\n✅ DONE! Your dataset is ready in 'bolly_reviews_2026.csv'")
+
         
